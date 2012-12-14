@@ -44,7 +44,7 @@ Log.prototype.send = function(eventtext, sourcetype, host, source, callback) {
         method: 'POST',
         body: eventtext,
         headers: {
-            Authorization: "Basic " + new Buffer(this.access_token + ":").toString("base64")
+            Authorization: "Basic " + new Buffer(":" + this.access_token).toString("base64")
         }
     };
     
